@@ -33,24 +33,24 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: [
-          path.join(projectRoot, 'src')
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: [
-          path.join(projectRoot, 'src')
-        ],
-        exclude: /node_modules/
-      }
-    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.vue$/,
+    //     loader: 'eslint',
+    //     include: [
+    //       path.join(projectRoot, 'src')
+    //     ],
+    //     exclude: /node_modules/
+    //   },
+    //   {
+    //     test: /\.js$/,
+    //     loader: 'eslint',
+    //     include: [
+    //       path.join(projectRoot, 'src')
+    //     ],
+    //     exclude: /node_modules/
+    //   }
+    // ],
     loaders: [
       {
         test: /\.vue$/,
@@ -83,6 +83,9 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader'
       }
     ]
   },
