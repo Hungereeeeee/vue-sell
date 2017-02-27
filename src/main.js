@@ -14,8 +14,8 @@ Vue.use(VueResource)
 
 const routes = [
   {path: '/goods', component: goods, name: 'goods'},
-  {path: '/seller', component: seller},
-  {path: '/ratings', component: ratings}
+  {path: '/seller', component: seller,name:'seller'},
+  {path: '/ratings', component: ratings,name:'ratings'}
 ]
 const router = new VueRouter({
   routes,
